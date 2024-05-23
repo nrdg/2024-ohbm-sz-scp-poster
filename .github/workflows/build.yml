@@ -34,9 +34,9 @@ jobs:
               with:
                 r-version: '4.1.0'
                 pandoc-version: '2.14'
-              extra-packages: |
-                any::pagedown
-                any::posterdown
+                extra-packages: |
+                    any::pagedown
+                    any::posterdown
 
             - name: Build the poster
               run: make all && mkdir website && mv poster.html website/

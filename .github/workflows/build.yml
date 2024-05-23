@@ -32,4 +32,5 @@ jobs:
                 r-version: '4.1.0'
 
             - name: Build the poster
+              uses: maxheld83/pandoc@v2
               run: make install && make all

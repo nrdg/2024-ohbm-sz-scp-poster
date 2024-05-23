@@ -39,6 +39,8 @@ knitr::opts_chunk$set(echo = FALSE)
 - We used pyAFQ []
 - We used GAMs [@Muncy2022GAMs]
 
+![](./images/OHBM-SZ-SCP-methods.png)
+
 # Main Results
 
 - Here's where we put in some results

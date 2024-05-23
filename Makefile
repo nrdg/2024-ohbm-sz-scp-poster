@@ -2,9 +2,8 @@ all:
 	Rscript -e "pagedown::chrome_print('poster.Rmd')"
 
 install:
-	Rscript -e "install.packages('pak', repos='https://r-lib.github.io/p/pak/dev/')"
-	Rscript -e "pak::pak('rstudio/pagedown')"
-	Rscript -e "pak::pak('rstudio/posterdown')"
+	Rscript -e "install.packages('pagedown', repos='https://cran.rstudio.com')"
+	Rscript -e "install.packages('posterdown', repos='https://cran.rstudio.com')"
 
 clean:
 	rm poster.pdf poster.html

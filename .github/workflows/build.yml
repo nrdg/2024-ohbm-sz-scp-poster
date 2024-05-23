@@ -21,15 +21,14 @@ jobs:
 
     build-deploy:
         runs-on: ubuntu-latest
-        container:
-            image: rocker/r-rmd:latest
         steps:
 
             - name: Check out repository
               uses: actions/checkout@v4
 
-            - name: Install SSL
-              run: apt-get update && apt-get install -y libssl-dev
+            - name: Install linux dependencies
+              run: apt-get update && apt-get install -y libssl-dev pandoc
+
 
             - name: Build the poster
               run: make install && make all

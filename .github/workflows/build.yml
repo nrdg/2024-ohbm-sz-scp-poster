@@ -35,7 +35,7 @@ jobs:
                 pandoc-version: '2.14'
 
             - name: Build the poster
-              run: make install && make all && mkdir website && mv poster.html website/index.html
+              run: make install && make all && mkdir website && mv poster.html website/index.html && touch website/.nojekyll
 
             - name: Commit poster PDF
               uses: EndBug/add-and-commit@v9

@@ -1,0 +1,57 @@
+---
+poster_height: 46in
+poster_width: 33in
+title: "Structural cerebellar connectivity in schizophrenia: Support for the cognitive dysmetria theory"
+author:
+  - name: Teresa Gomez
+    affil: 1
+    orcid: '0000-0001-1111-1111' #TODO
+  - name: Ariel Rokem
+    affil: 1
+    orcid: '0000-0003-0679-1985'
+affiliation:
+  - num: 1
+    address: Department of Psychology, University of Washington
+affiliation_textsize: "16pt"
+column_numbers: 2
+output:
+  posterdown::posterdown_html:
+    self_contained: true
+bibliography: references.bib
+knit: pagedown::chrome_print
+header-includes: |
+  \usepackage{dcolumn}
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<!-- #region -->
+# Background
+
+- Some kind of background
+
+# Methods
+
+- Something about the methods
+- We used pyAFQ []
+- We used GAMs [@Muncy2022GAMs]
+
+# Main Results
+
+- Here's where we put in some results
+
+<!-- #region -->
+
+# Additional Results
+- Some more results
+
+
+# Conclusions
+- Some kind of conclusion.
+
+# Acknowledgements
+
+# References

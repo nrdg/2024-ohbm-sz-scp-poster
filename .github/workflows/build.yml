@@ -28,8 +28,12 @@ jobs:
             - name: Check out repository
               uses: actions/checkout@v4
 
+            - name: Install SSL
+              run: sudo apt-get install -y libssl-dev
+
             - name: Build the poster
               run: make install && make all
+
             - name: Commit poster PDF
               uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
               with:

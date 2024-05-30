@@ -92,7 +92,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Data: the UCLA Consortium for Neuropsychiatric Phenomics LA5c Study (Gorgolewski et al. 2017, Bilder et al. 2020), which includes diffusion MRI (dMRI) data from 49 participants with SZ (mean age: 36.2 +/- 8.8 SD; 12 female) and 123 controls (CTRL) (mean age: 31.6 +/- 8.8 SD; 58 female). (ADHD/BPD)
 - The data were processed using QSIPREP (Cieslak et al. 2021) and pyAFQ [@Kruper2021-az] (Yeatman et al. 2012)
-- The SCPs were identified in each individual using pyAFQ and anatomical criteria that capture the decussation of these bundles. [Jossinger]
+- The SCPs were identified in each individual using pyAFQ and anatomical criteria that capture the decussation of these bundles. [@Jossinger2023-gj]
 - This resulted in tract profiles of fractional anisotropy (FA) and mean diffusivity (MD) in each white matter pathway (100 nodes each). 
 - We then fit generalized additive models (GAMs) for FA and MD in each bundle as a function of diagnosis (entered as a factor: SZ or CTRL), nodeID (modeled with an adaptive smooth, where degree of the smooth is determined as the k that minimizes the AIC), age, sex (entered as a factor) and data quality (quantified as the neighbor correlation from QSIPREP). [@Muncy2022GAMs]
 

@@ -1,3 +1,4 @@
+```{r active="", eval=FALSE}
 ---
 poster_height: 46in
 poster_width: 33in
@@ -83,7 +84,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - The *cognitive dysmetria* theory of schizophrenia posits that the core cognitive deficits arise from dysfunctions of cortical-thalamic-cerebellar (CTC) circuits [@Andreasen1998-gg]
 - Previous research found increased functional connectivity in the cerebello-thalamo-cortical circuits in individuals at clinical high risk for psychosis (Cao et al. 2018). 
 - This hyperconnectivity was more pronounced in individuals who converted to psychosis, correlated to the severity of symptoms, and was predictive of the time to conversion. 
-- Cerebellar peduncles (Palesi et al., 2015)
+- Cerebellar peduncles [@Palesi2015-oi]
 
 **QUESTION**: Are the physical properties of the white matter tracts of the CTC different in individuals with SZ?   
 

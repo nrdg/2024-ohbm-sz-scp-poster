@@ -1,58 +1,116 @@
 ---
 poster_height: 46in
 poster_width: 33in
+
 title: "Structural cerebellar connectivity in schizophrenia: Support for the cognitive dysmetria theory"
 author:
   - name: Teresa Gomez
     affil: 1
-    orcid: '0000-0001-1111-1111' #TODO
+    orcid: '0000-0001-7909-4430'
   - name: Ariel Rokem
     affil: 1
     orcid: '0000-0003-0679-1985'
 affiliation:
   - num: 1
     address: Department of Psychology, University of Washington
-affiliation_textsize: "16pt"
+
+primary_colour: "#32006e"
+affiliation_textsize: "14pt"
 column_numbers: 2
+font_family: "tahoma"
+titletext_fontfamily: "palatino"
+
 output:
   posterdown::posterdown_html:
     self_contained: true
+    pandoc_args: ["--csl=science-without-titles.csl"]
+
+header-includes:
+    - \usepackage[labelformat=empty]{caption}
+
 bibliography: references.bib
+
 knit: pagedown::chrome_print
-header-includes: |
-  \usepackage{dcolumn}
 
 ---
+```
+
+<style>
+.poster_body h1 {
+    font-family: "Palatino", "URW Palladio L", "serif";
+}
+
+body {
+bottom-margin: 0px;
+}
+.poster_body h1 {
+    background-color: #b7a57a;
+    border: #85754d;
+}
+
+h5 br {
+    display: none;
+}
+
+.poster_title h3 {
+    font-family: "Palatino", "URW Palladio L", "serif";
+
+}
+
+.poster_title h5 {
+    font-family: "Palatino", "URW Palladio L", "serif";
+    width: 120%;
+    margin-left:-10%;
+}
+
+.title_container {
+    height: 165mm; }
+
+img[src*='#logo'] {
+    width: 10%;
+    height: 10%
+}
+
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-<!-- #region -->
 # Background
 
-- Some kind of background
+- Schizophrenia (SZ) is a neurodevelopmental psychiatric disorder that carries significant health burden. 
+- The *cognitive dysmetria* theory of schizophrenia posits that the core cognitive deficits arise from dysfunctions of cortical-thalamic-cerebellar (CTC) circuits [@Andreasen1998-gg]
+- Previous research found increased functional connectivity in the cerebello-thalamo-cortical circuits in individuals at clinical high risk for psychosis (Cao et al. 2018). 
+- This hyperconnectivity was more pronounced in individuals who converted to psychosis, correlated to the severity of symptoms, and was predictive of the time to conversion. 
+- Cerebellar peduncles (Palesi et al., 2015)
+
+**QUESTION**: Are the physical properties of the white matter tracts of the CTC different in individuals with SZ?   
 
 # Methods
 
-- Something about the methods
-- We used pyAFQ []
-- We used GAMs [@Muncy2022GAMs]
+- Data: the UCLA Consortium for Neuropsychiatric Phenomics LA5c Study (Gorgolewski et al. 2017, Bilder et al. 2020), which includes diffusion MRI (dMRI) data from 49 participants with SZ (mean age: 36.2 +/- 8.8 SD; 12 female) and 123 controls (CTRL) (mean age: 31.6 +/- 8.8 SD; 58 female). (ADHD/BPD)
+- The data were processed using QSIPREP (Cieslak et al. 2021) and pyAFQ [@Kruper2021-az] (Yeatman et al. 2012)
+- The SCPs were identified in each individual using pyAFQ and anatomical criteria that capture the decussation of these bundles. [Jossinger]
+- This resulted in tract profiles of fractional anisotropy (FA) and mean diffusivity (MD) in each white matter pathway (100 nodes each). 
+- We then fit generalized additive models (GAMs) for FA and MD in each bundle as a function of diagnosis (entered as a factor: SZ or CTRL), nodeID (modeled with an adaptive smooth, where degree of the smooth is determined as the k that minimizes the AIC), age, sex (entered as a factor) and data quality (quantified as the neighbor correlation from QSIPREP). [@Muncy2022GAMs]
 
-![](./images/OHBM-SZ-SCP-methods.png)
 
-# Main Results
+# Results
 
-- Here's where we put in some results
-
-<!-- #region -->
-
-# Additional Results
-- Some more results
-
+- MD differed significantly in the left superior cerebellar peduncle (SCP) between the SZ and CTRL groups (p<0.05). (but not ADHD/BPD)
+- Individuals with SZ had lower MD in this tract than the matched controls. 
+- This finding held after adding medication as a covariate (haloperidol equivalent dosage). 
+- No other significant differences were found.
 
 # Conclusions
-- Some kind of conclusion.
+
+- We found decreased MD in the left SCP, a component of the CTC. 
+- Lower MD may indicated increased myelination and therefore increased connectivity. 
+- Increased density and directional coherence (but not axonal diameter) may also have similar effects on MD. 
+- These results appear in line with previous fMRI results that found increased functional connectivity in the CTC in individuals with SZ. [Cao]
+- This provides additional support for the cognitive dysmetria theory of SZ. 
+
 
 # Acknowledgements
 

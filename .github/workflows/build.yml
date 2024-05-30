@@ -1,10 +1,4 @@
-on:
-    push:
-      branches:
-        - main
-    pull_request:
-      branches:
-        - main
+on: [push, pull_request]
 
 name: Render and Publish
 
@@ -37,7 +31,14 @@ jobs:
             - name: Build the poster
               run: make install && make all && mkdir website && mv poster.html website/index.html && touch website/.nojekyll
 
+            - name: Upload PDF
+              uses: actions/upload-artifact@v1
+              with:
+                name: poster
+                path: poster.pdf
+
             - name: Commit poster PDF
+              if: github.event.pull_request.merged == true
               uses: EndBug/add-and-commit@v9
               with:
                 add: 'poster.pdf'
@@ -45,6 +46,7 @@ jobs:
                 message: 'Add poster.pdf at ${{ github.sha }}'
 
             - name: Deploy html to gh-pages
+              if: github.event.pull_request.merged == true
               uses: JamesIves/github-pages-deploy-action@4.1.5
               with:
                 branch: gh-pages

@@ -1,9 +1,8 @@
-```{r active="", eval=FALSE}
 ---
 poster_height: 46in
 poster_width: 33in
 
-title: "Structural cerebellar connectivity in schizophrenia: Support for the cognitive dysmetria theory"
+title: Structural cerebellar connectivity in schizophrenia
 author:
   - name: Teresa Gomez
     affil: 1
@@ -53,7 +52,6 @@ bibliography: references.bib
 knit: pagedown::chrome_print
 
 ---
-```
 
 <style>
 .poster_body h1 {
@@ -104,16 +102,16 @@ knitr::opts_chunk$set(echo = FALSE)
 - Previous research found increased functional connectivity in the cerebello-thalamo-cortical circuits in individuals at clinical high risk for psychosis. [@Cao2018]
 - This hyperconnectivity was more pronounced in individuals who converted to psychosis, correlated to the severity of symptoms, and was predictive of the time to conversion.
 
-!["…The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas… The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle." [@Palesi2015-oi]](images/palesi.jpg){#id .class width=100% height=100% }
+![The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas… The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle.](images/palesi.jpg){#id .class width=100% height=100% }
 
-**QUESTION**: Are the physical properties of the white matter tracts of the CTC different in individuals with SZ?   
+**QUESTION**: Are the physical properties of the white matter tracts of the CTC different in individuals with SZ?
 
 # Methods
 
 - **Data:** the UCLA Consortium for Neuropsychiatric Phenomics LA5c Study (@ds000030:1.0.0), which includes diffusion MRI (dMRI) data from 49 participants with SZ (mean age: 36.2 +/- 8.8 SD; 12 female), XX participants with ADHD (mean age: XX +/- XX SD; XX female), XX participants with bipolar disorder (BP) (mean age: XX +/- XX SD), and 123 controls (CTRL) (mean age: 31.6 +/- 8.8 SD; 58 female).
 - The data were processed using QSIPREP (Cieslak et al. 2021) and pyAFQ [@Kruper2021-az] (Yeatman et al. 2012)
 - The SCPs were identified in each individual using pyAFQ and anatomical criteria that capture the decussation of these bundles. [@Jossinger2023-gj]
-- This resulted in tract profiles of fractional anisotropy (FA) and mean diffusivity (MD) in each white matter pathway (100 nodes each). 
+- This resulted in tract profiles of fractional anisotropy (FA) and mean diffusivity (MD) in each white matter pathway (100 nodes each).
 - We then fit generalized additive models (GAMs) for FA and MD in each bundle as a function of diagnosis (entered as a factor: SZ or CTRL), nodeID (modeled with an adaptive smooth, where degree of the smooth is determined as the k that minimizes the AIC), age, sex (entered as a factor) and data quality (quantified as the neighbor correlation from QSIPREP). [@Muncy2022GAMs]
 
 <!---
@@ -124,24 +122,24 @@ knitr::opts_chunk$set(echo = FALSE)
 ![b](images/sub-50010_SCP_back.png){#id .class width=100% height=100% }
 ![c](images/sub-50010_SCP_back.png){#id .class width=100% height=100% }
 ![d](images/sub-50010_SCP_back.png){#id .class width=100% height=100% }
-The left (dark blue) and right (light blue) SCP bundles visualized in an individual with SZ, with sagittal (a, d), coronal (b) and axial (c) anatomical views of the T1-weighted scan of this individual. 
+The left (dark blue) and right (light blue) SCP bundles visualized in an individual with SZ, with sagittal (a, d), coronal (b) and axial (c) anatomical views of the T1-weighted scan of this individual.
 
 # Results
 
-- MD differed significantly in the left superior cerebellar peduncle (SCP) between the SZ and CTRL groups (p<0.05), but not between the ADHD and CTRL groups or BP and CTRL groups. 
-- Individuals with SZ had lower MD in this tract than the matched controls. 
-- This finding held after adding medication as a covariate (haloperidol equivalent dosage). 
+- MD differed significantly in the left superior cerebellar peduncle (SCP) between the SZ and CTRL groups (p<0.05), but not between the ADHD and CTRL groups or BP and CTRL groups.
+- Individuals with SZ had lower MD in this tract than the matched controls.
+- This finding held after adding medication as a covariate (haloperidol equivalent dosage).
 - No other significant differences were found.
 
 ![](images/figure.png){#id .class width=100% height=100% }
 
 # Conclusions
 
-- We found decreased MD in the left SCP, a component of the CTC. 
-- Lower MD may indicated increased myelination and therefore increased connectivity. 
-- Increased density and directional coherence (but not axonal diameter) may also have similar effects on MD. 
+- We found decreased MD in the left SCP, a component of the CTC.
+- Lower MD may indicated increased myelination and therefore increased connectivity.
+- Increased density and directional coherence (but not axonal diameter) may also have similar effects on MD.
 - These results appear in line with previous fMRI results that found increased functional connectivity in the CTC in individuals with SZ. [@Cao2018]
-- This provides additional support for the cognitive dysmetria theory of SZ. 
+- This provides additional support for the cognitive dysmetria theory of SZ.
 
 
 # Acknowledgements

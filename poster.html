@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=tahoma' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=palatino' rel='stylesheet'>
+
+
+
+<title>Structural cerebellar connectivity in schizophrenia</title>
+
+
+
+
+
+<style>
+@page {
+size: 33in 46in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 45px;
+width: 33in;
+height: 46in;
+padding: 0;
+text-align: justify;
+font-family: tahoma;
+}
+.poster_wrap {
+width: 33in;
+height: 46in;
+padding: 0cm;
+}
+.title_container {
+width: 33in;
+height: calc(46in * 0.15);
+overflow: hidden;
+background-color: #32006e;
+border: 0 solid #0b4545;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #32006e;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #32006e;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: palatino;
+}
+/* unvisited link */
+a:link {
+color: #cc0000;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #cc0000;
+}
+
+/* mouse over link */
+a:hover {
+color: #cc0000;
+}
+
+/* selected link */
+a:active {
+color: #cc0000;
+}
+.poster_body {
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+-moz-column-count: 2; /* Firefox */
+column-count: 2;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #32006e;
+-moz-column-rule-color: #32006e;
+column-rule-color: #32006e;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 75pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(33in + 0 + 0);
+height: calc(46in * 0.83);
+padding-top: calc(46in * 0.005);
+padding-bottom: calc(46in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #ffffff;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: ;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 2mm solid #32006e;
+background-color: #32006e;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #00808024;
+color: #32006e;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Structural cerebellar connectivity in schizophrenia</h1>
+<h3 id="author">Teresa Gomez<sup>1, <a class="orcid" href="https://orcid.org/0000-0001-7909-4430"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>, Sivan Jossinger<sup>2</sup>, John Kruper<sup>1</sup>, Adam Richie-Halford<sup>3</sup>, Michal Ben-Shachar<sup>2</sup>, Jason Yeatman<sup>3</sup>, Ariel Rokem<sup>1, <a class="orcid" href="https://orcid.org/0000-0003-0679-1985"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup></h3><br>
+<h5 id="affiliation"><sup>1</sup> Department of Psychology, University of Washington<br> <sup>2</sup> English Department and Gonda Multidisciplinary Brain Research Center, Bar-Ilan University, Israel<br> <sup>3</sup> Stanford University Graduate School of Education and Stanford University School of Medicine, Division of Developmental-Behavioral Pediatrics</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<style>
+.poster_body h1 {
+    font-family: "Palatino", "URW Palladio L", "serif";
+}
+
+body {
+    bottom-margin: 0px;
+}
+
+.poster_body h1 {
+    background-color: #b7a57a;
+    border: #85754d;
+}
+
+h5 br {
+    display: none;
+}
+
+.poster_title h3 {
+    font-family: "Palatino", "URW Palladio L", "serif";
+}
+
+.poster_title h5 {
+    font-family: "Palatino", "URW Palladio L", "serif";
+    width: 120%;
+    margin-left:-10%;
+}
+
+.title_container {
+    height: 180mm; }
+
+img[src*='#logo'] {
+    width: 10%;
+    height: 10%
+}
+
+</style>
+<div id="background" class="section level1">
+<h1>Background</h1>
+<ul>
+<li>Schizophrenia (SZ) is a neurodevelopmental psychiatric disorder that carries significant health burden.</li>
+<li>The <em>cognitive dysmetria</em> theory of schizophrenia posits that the core cognitive deficits arise from dysfunctions of cortical-thalamic-cerebellar (CTC) circuits. <span class="citation">(<em>1</em>)</span></li>
+<li>Previous research found increased functional connectivity in the cerebello-thalamo-cortical circuits in individuals at clinical high risk for psychosis. <span class="citation">(<em>2</em>)</span></li>
+<li>This hyperconnectivity was more pronounced in individuals who converted to psychosis, correlated to the severity of symptoms, and was predictive of the time to conversion.</li>
+</ul>
+<center>
+<div class="figure">
+<img src="images/palesi.jpg" alt="The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas… The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle. (3)" style="width:60.0%;height:60.0%" />
+<p class="caption">The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas… The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle. <span class="citation">(<em>3</em>)</span></p>
+</div>
+</center>
+<p><strong>QUESTION</strong>: Are the physical properties of the white matter tracts of the CTC different in individuals with SZ?</p>
+<p><br />
+</p>
+</div>
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<ul>
+<li><strong>Data:</strong> the UCLA Consortium for Neuropsychiatric Phenomics LA5c Study <span class="citation">(<em>4</em>)</span>, which includes diffusion MRI (dMRI) data from 49 participants with SZ (mean age: 36.2 +/- 8.8 SD; 12 female), 40 participants with ADHD (mean age: 31.95 +/- 10.3 SD; 20 female), 49 participants with bipolar disorder (BD) (mean age: 35.3 +/- 9.0 SD, 21 female), and 123 controls (CTRL) (mean age: 31.6 +/- 8.8 SD; 58 female).</li>
+<li>The data were processed using QSIPREP <span class="citation">(<em>5</em>)</span> and pyAFQ <span class="citation">(<em>6</em>)</span> <span class="citation">(<em>7</em>)</span></li>
+<li>The SCPs were identified in each individual using pyAFQ and anatomical criteria that capture the decussation of these bundles. <span class="citation">(<em>8</em>)</span></li>
+<li>This resulted in tract profiles of fractional anisotropy (FA) and mean diffusivity (MD) in each white matter pathway (100 nodes each).</li>
+<li>We then fit generalized additive models (GAMs) for FA and MD in each bundle as a function of diagnosis (entered as a factor: SZ or CTRL), nodeID (modeled with an adaptive smooth, where degree of the smooth is determined as the k that minimizes the AIC), age, sex (entered as a factor) and data quality (quantified as the neighbor correlation from QSIPREP). <span class="citation">(<em>9</em>)</span></li>
+</ul>
+<img src="images/SCP_right.png" style="width:24.0%;height:24.0%" />
+<img src="images/SCP_back.png" style="width:24.0%;height:24.0%" />
+<img src="images/SCP_left.png" style="width:24.0%;height:24.0%" />
+<img src="images/SCP_top.png" style="width:24.0%;height:24.0%" />
+<div style="font-size:32px; font-family:&#39;Palatino&#39;; text-align:center">
+The left (dark blue) and right (light blue) SCP bundles visualized in an individual with SZ, with sagittal, coronal and axial anatomical views of the T1-weighted scan of this individual.
+</div>
+<p><br />
+<br />
+<br />
+</p>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<p><img src="images/figure_mod.png" style="width:100.0%;height:100.0%" /></p>
+<ul>
+<li>MD differed significantly in the left superior cerebellar peduncle (SCP) between the SZ and CTRL groups (p&lt;0.05), but not between the ADHD and CTRL groups or BD and CTRL groups.</li>
+<li>Individuals with SZ had lower MD in this tract than the matched controls.</li>
+<li>This finding held after adding medication as a covariate (haloperidol equivalent dosage).</li>
+<li>No other significant differences were found.</li>
+</ul>
+<p><br />
+</p>
+</div>
+<div id="conclusions" class="section level1">
+<h1>Conclusions</h1>
+<ul>
+<li>We found decreased MD in the left SCP, a component of the CTC.</li>
+<li>Lower MD may indicated increased myelination and therefore increased connectivity.</li>
+<li>Increased density and directional coherence (but not axonal diameter) may also have similar effects on MD.</li>
+<li>These results appear in line with previous fMRI results that found increased functional connectivity in the CTC in individuals with SZ. <span class="citation">(<em>2</em>)</span></li>
+<li>This provides additional support for the cognitive dysmetria theory of SZ.</li>
+</ul>
+<p><br />
+</p>
+</div>
+<div id="acknowledgements" class="section level1">
+<h1>Acknowledgements</h1>
+<p>NIMH grants: MH121867 (PI: Poldrack), MH121868 (PI: Rokem), EB027585 (PI: Garyfallidis)</p>
+<p><br />
+</p>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-Andreasen1998-gg">
+<p>1. N. C. Andreasen, S. Paradiso, D. S. O’Leary, <em>Schizophr. Bull.</em> <strong>24</strong>, 203–218 (1998).</p>
+</div>
+<div id="ref-Cao2018">
+<p>2. H. Cao <em>et al.</em>, <em>Nature Communications</em>. <strong>9</strong>, 3836 (2018).</p>
+</div>
+<div id="ref-Palesi2015-oi">
+<p>3. F. Palesi <em>et al.</em>, <em>Brain Struct. Funct.</em> <strong>220</strong>, 3369–3384 (2015).</p>
+</div>
+<div id="ref-ds000030:1.0.0">
+<p>4. R. Bilder <em>et al.</em>, UCLA consortium for neuropsychiatric phenomics la5c study (2020).</p>
+</div>
+<div id="ref-Cieslak2021-vj">
+<p>5. M. Cieslak <em>et al.</em>, <em>Nat. Methods</em>. <strong>18</strong>, 775–778 (2021).</p>
+</div>
+<div id="ref-Kruper2021-az">
+<p>6. J. Kruper <em>et al.</em>, <em>Apert Neuro</em>. <strong>1</strong> (2021).</p>
+</div>
+<div id="ref-Yeatman2012-ze">
+<p>7. J. D. Yeatman, R. F. Dougherty, N. J. Myall, B. A. Wandell, H. M. Feldman, <em>PLoS One</em>. <strong>7</strong>, e49790 (2012).</p>
+</div>
+<div id="ref-Jossinger2023-gj">
+<p>8. S. Jossinger, M. Yablonski, O. Amir, M. Ben-Shachar, <em>Neurobiol. Lang. (Camb.)</em>, 1–40 (2023).</p>
+</div>
+<div id="ref-Muncy2022GAMs">
+<p>9. N. M. Muncy, A. Kimbler, A. M. Hedges-Muncy, D. L. McMakin, A. T. Mattfeld, <em>Neuroimage Clin</em>. <strong>33</strong>, 102937 (2022).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>

@@ -31,8 +31,8 @@ affiliation_textsize: "14pt"
 reference_textsize: "16pt"
 
 column_numbers: 2
-font_family: "tahoma"
-titletext_fontfamily: "palatino"
+font_family: "helvetica"
+titletext_fontfamily: "helvetica"
 
 output:
   posterdown::posterdown_html:
@@ -50,7 +50,7 @@ knit: pagedown::chrome_print
 
 <style>
 .poster_body h1 {
-    font-family: "Palatino", "URW Palladio L", "serif";
+    font-family: "Helvetica";
 }
 
 body {
@@ -67,17 +67,17 @@ h5 br {
 }
 
 .poster_title h3 {
-    font-family: "Palatino", "URW Palladio L", "serif";
+    font-family: "Helvetica";
 }
 
 .poster_title h5 {
-    font-family: "Palatino", "URW Palladio L", "serif";
+    font-family: "Helvetica";
     width: 120%;
     margin-left:-10%;
 }
 
 .title_container {
-    height: 140mm; }
+    height: 150mm; }
 
 img[src*='#logo'] {
     width: 10%;
@@ -94,9 +94,9 @@ img[src*='#logo'] {
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-![](./images/university-of-washington-501924867.gif){height=250 style="position: absolute; top: 3900px; left: 800px;"}
-![](./images/Block_S_2_color_red.png){height=250 style="position: absolute; top: 3900px; left: 1100px;"}
-![](./images/biu_logo.png){height=250 style="position: absolute; top: 3900px; left: 1300px;"}
+![](./images/university-of-washington-501924867.gif){height=250 style="position: absolute; top: 3800px; left: 800px;"}
+![](./images/Block_S_2_color_red.png){height=250 style="position: absolute; top: 3800px; left: 1100px;"}
+![](./images/biu_logo.png){height=250 style="position: absolute; top: 3800px; left: 1300px;"}
 
 # Background
 

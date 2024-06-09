@@ -7,24 +7,28 @@ author:
   - name: Teresa Gomez
     affil: 1
   - name: Sivan Jossinger
-    affil: 2
+    affil: 2, 3
   - name: John Kruper
     affil: 1
   - name: Adam Richie-Halford
-    affil: 3
+    affil: 4
   - name: Michal Ben-Shachar
-    affil: 2
+    affil: 2, 5
   - name: Jason Yeatman
     affil: 3
   - name: Ariel Rokem
     affil: 1
 affiliation:
   - num: 1
-    address: Department of Psychology, University of Washington
+    address: Department of Psychology and eScience Institute, University of Washington
   - num: 2
-    address: English Department and Gonda Multidisciplinary Brain Research Center, Bar-Ilan University
+    address: Gonda Multidisciplinary Brain Research Center, Bar-Ilan University
   - num: 3
+    address: Functional MRI Center, Beilinson Hospital, Rabin Medical Center
+  - num: 4
     address: Graduate School of Education and Division of Developmental-Behavioral Pediatrics, Stanford University
+  - num: 5
+    address: English Department, Bar-Ilan University
 
 primary_colour: "#32006e"
 affiliation_textsize: "14pt"

@@ -110,12 +110,9 @@ knitr::opts_chunk$set(echo = FALSE)
 - The *cognitive dysmetria* theory of schizophrenia posits that the core cognitive deficits arise from dysfunctions of cortical-thalamic-cerebellar (CTC) circuits. [@Andreasen1998-gg]
 - Previous research found increased functional connectivity in the cerebello-thalamo-cortical circuits in individuals at clinical high risk for psychosis. [@Cao2018]
 - This hyperconnectivity was more pronounced in individuals who converted to psychosis, correlated to the severity of symptoms, and was predictive of the time to conversion.
+-  The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas… The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle. (image from [@Palesi2015-oi])
 
-<center>
-
-![The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas… The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle. [@Palesi2015-oi]](images/palesi.jpg){width=60% height=60%}
-
-</center>
+![](images/palesi.jpg){width=60% height=60%}
 
 **QUESTION**: Are the physical properties of the white matter tracts of the CTC different in individuals with SZ?
 
@@ -125,7 +122,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Data:** the UCLA Consortium for Neuropsychiatric Phenomics LA5c Study, which includes diffusion MRI (dMRI) data from 49 participants with SZ (mean age: 36.2 $\pm$ 8.8 SD; 12 female), 40 participants with ADHD (mean age: 31.95 $\pm$ 10.3 SD; 20 female), 49 participants with bipolar disorder (BD) (mean age: 35.3 $\pm$ 9.0 SD, 21 female), and 123 controls (HC) (mean age: 31.6 $\pm$ 8.8 SD; 58 female).
 
-**Processing**: The data were processed using QSIPREP [@Cieslak2021-vj] and pyAFQ [@Kruper2021-az, @Yeatman2012-ze] to extract tract profiles of fractional anisotropy (FA) and mean diffusivity (MD). SCPs were identified in each individual using anatomical criteria that capture the decussation of these bundles. [@Jossinger2023-gj]. Group-blinded QC of SCP bundle was conducted by two expert observers (TG and AR).
+**Processing**: The data were processed using QSIPREP [@Cieslak2021-vj] and pyAFQ [@Kruper2021-az, @Yeatman2012-ze] to extract tract profiles of fractional anisotropy (FA) and mean diffusivity (MD). The bilateral SCP were identified in each individual using anatomical criteria that capture the decussation of the SCP [@Jossinger2023-gj]. Group-blinded QC of SCP bundle was conducted by two expert observers (TG and AR).
 
 **Analysis**: To overcome confounds due to data quality, each subject in the test group was matched to HC with same age, sex and data quality (neighbor correlations, NDC). Generalized additive models (GAMs) for FA and MD in each SCP as a function of diagnosis (entered as a factor: SZ or HC), nodeID (modeled with an adaptive smooth, where degree of the smooth is determined as the k that minimizes the AIC), age, sex (entered as a factor) and data quality (NDC). [@Muncy2022GAMs]
 
@@ -148,7 +145,7 @@ EB027585 (PI: Garyfallidis)
 ![](images/SCP_right.png){width=24% height=24%}
 ![](images/SCP_back.png){width=24% height=24%}
 ![](images/SCP_left.png){width=24% height=24%}
-![](images/SCP_top.png){width=24% height=24%; style="transform: rotate(180deg);"}
+![](images/SCP_top.png){width=24% height=24%}
 <div style="font-size:32px; font-family:'Palatino'; text-align:center">The left (dark blue) and right (light blue) SCP bundles visualized in an individual with SZ, with sagittal, coronal and axial anatomical views of the T1-weighted scan of this individual.</div>
 
 ![](images/figure_mod.png){width=100% height=100%}

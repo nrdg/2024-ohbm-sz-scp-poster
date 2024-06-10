@@ -110,7 +110,9 @@ knitr::opts_chunk$set(echo = FALSE)
 - This hyperconnectivity was more pronounced in individuals who converted to psychosis, correlated to the severity of symptoms, and was predictive of the time to conversion.
 -  The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas… The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle. (image from [@Palesi2015-oi])
 
+<center>
 ![](images/palesi.jpg){width=60% height=60%}
+</center>
 
 **QUESTION**: Are the physical properties of the white matter tracts of the CTC different in individuals with SZ?
 

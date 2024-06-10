@@ -13,7 +13,7 @@ author:
   - name: Adam Richie-Halford
     affil: 4
   - name: Michal Ben-Shachar
-    affil: 2, 5
+    affil: 2
   - name: Jason Yeatman
     affil: 3
   - name: Ariel Rokem
@@ -27,8 +27,6 @@ affiliation:
     address: Functional MRI Center, Beilinson Hospital, Rabin Medical Center
   - num: 4
     address: Graduate School of Education and Division of Developmental-Behavioral Pediatrics, Stanford University
-  - num: 5
-    address: English Department, Bar-Ilan University
 
 primary_colour: "#32006e"
 affiliation_textsize: "14pt"
@@ -124,7 +122,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Processing**: The data were processed using QSIPREP [@Cieslak2021-vj] and pyAFQ [@Kruper2021-az, @Yeatman2012-ze] to extract tract profiles of fractional anisotropy (FA) and mean diffusivity (MD). The bilateral SCP were identified in each individual using anatomical criteria that capture the decussation of the SCP [@Jossinger2023-gj]. Group-blinded QC of SCP bundle was conducted by two expert observers (TG and AR).
 
-**Analysis**: To overcome confounds due to data quality, each subject in the test group was matched to HC with same age, sex and data quality (neighbor correlations, NDC). Generalized additive models (GAMs) for FA and MD in each SCP as a function of diagnosis (entered as a factor: SZ or HC), nodeID (modeled with an adaptive smooth, where degree of the smooth is determined as the k that minimizes the AIC), age, sex (entered as a factor) and data quality (NDC). [@Muncy2022GAMs]
+**Analysis**: To overcome confounds due to data quality, each subject in the test group was matched to HC with same age, sex and data quality (neighbor correlations, NDC). Generalized additive models (GAMs) for FA and MD in each SCP as a function of diagnosis (entered as a factor: SZ or HC), nodeID (modeled with an adaptive smooth, where degree of the smooth is determined as the k that minimizes the AIC), age, sex (entered as a factor) and data quality (NDC) [@Muncy2022GAMs].
 
 # Acknowledgements
 
@@ -136,7 +134,6 @@ MH121868 (PI: Rokem)
 
 EB027585 (PI: Garyfallidis)
 
-[https://nrdg.github.io/2024-ohbm-sz-scp-poster/](https://nrdg.github.io/2024-ohbm-sz-scp-poster/)
 
 \
 
@@ -151,7 +148,7 @@ EB027585 (PI: Garyfallidis)
 ![](images/figure_mod.png){width=100% height=100%}
 
 - MD differed significantly in the left superior cerebellar peduncle (SCP) between the SZ and HC groups (p<0.05), but not between the ADHD and HC groups or BD and HC groups.
-- Individuals with SZ had lower MD in this tract than the matched controls.
+- Individuals with SZ had lower MD in this tract than the matched controls (as indicated).
 - This finding held after adding medication as a covariate (haloperidol equivalent dosage).
 
 \

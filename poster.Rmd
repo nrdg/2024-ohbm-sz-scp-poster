@@ -108,7 +108,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - The *cognitive dysmetria* theory of schizophrenia posits that the core cognitive deficits arise from dysfunctions of cortical-thalamic-cerebellar (CTC) circuits. [@Andreasen1998-gg]
 - Previous research found increased functional connectivity in the cerebello-thalamo-cortical circuits in individuals at clinical high risk for psychosis. [@Cao2018]
 - This hyperconnectivity was more pronounced in individuals who converted to psychosis, correlated to the severity of symptoms, and was predictive of the time to conversion.
--  The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas… The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle. (image from [@Palesi2015-oi])
+-  The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas… The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle (image taken from [@Palesi2015-oi]).
 
 <center>
 ![](images/palesi.jpg){width=60% height=60%}

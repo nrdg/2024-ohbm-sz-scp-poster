@@ -101,19 +101,19 @@ knitr::opts_chunk$set(echo = FALSE)
 ![](./images/Bar_Ilan_seal.svg.png){height=150 style="position: absolute; top: -50px; left: 2900px;"}
 
 
-![](./images/qr_poster.png){height=200 style="position: absolute; top: 3800px; left: 2900px;"}
+![](./images/qr_poster.png){height=260 style="position: absolute; top: 3800px; left: 2900px;"}
 
 
 # Background
 
 - Schizophrenia (SZ) is a neurodevelopmental psychiatric disorder that carries significant health burden.
 - The *cognitive dysmetria* theory of schizophrenia posits that the core cognitive deficits arise from dysfunctions of cortical-thalamic-cerebellar (CTC) circuits. [@Andreasen1998-gg]
-- Previous research found increased functional connectivity in the cerebello-thalamo-cortical circuits in individuals at clinical high risk for psychosis. [@Cao2018]
+- Previous research found increased functional connectivity in CTC in individuals at clinical high risk for psychosis. [@Cao2018]
 - This hyperconnectivity was more pronounced in individuals who converted to psychosis, correlated to the severity of symptoms, and was predictive of the time to conversion.
 -  The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas. The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle (image taken from [@Palesi2015-oi]).
 
 <center>
-![](images/palesi.jpg){width=60% height=60%}
+![](images/palesi.png){width=60% height=60%}
 </center>
 
 **QUESTION**: Are the physical properties of the white matter tracts of the CTC different in individuals with SZ?
@@ -141,13 +141,13 @@ knitr::opts_chunk$set(echo = FALSE)
 - Data quality confounds were mitigated by matching each SZ/ADHD/BD to a HC with similar age, sex and data quality (neighbor correlations, NDC).
 - Generalized additive models (GAMs) for FA and MD in each SCP as [@Muncy2022GAMs]:
 <p style="font-family:'Lucida Console', monospace">
-  FA/MD ~ group + s(nodeID, k, by=group) + \n age + sex + QC + s(subjectID, bs="re")
+  FA/MD ~ group + s(nodeID, k, by=group) + <br> &nbsp;&nbsp;&nbsp; age + sex + QC + s(subjectID, bs="re")
 </p>
 with k chosen to minimize AIC and neighbor correlations [@Yeh2019NDC] for QC.
 
 # Acknowledgements
 <div style="font-size:36px">
-NIH grants: MH121867 (PI: Poldrack), MH121868 (PI: Rokem, EB027585 (PI: Garyfallidis)
+NIH grants: MH121867 (PI: Poldrack), MH121868 (PI: Rokem), EB027585 (PI: Garyfallidis)
 </div>
 
 # Results{.mybreak}
@@ -164,9 +164,9 @@ NIH grants: MH121867 (PI: Poldrack), MH121868 (PI: Rokem, EB027585 (PI: Garyfall
 </center>
 <div style="font-size:32px; font-family:'Palatino'; text-align:center">Tract profiles of MD (left) and FA (right) $\pm$ bootstrapped 95% confidence interval</div>
 
-- MD differed significantly in the left superior cerebellar peduncle (SCP) between the SZ and HC groups (p<0.05), but not between the ADHD and HC groups or BD and HC groups.
-- Individuals with SZ had lower MD in this tract than the matched controls (as indicated).
+- Individuals with SZ had lower MD in left superior cerebellar peduncle (SCP) than HC (p<0.05).
 - This finding held after adding medication as a covariate (haloperidol equivalent dosage).
+- No significant differences were found in FA or in other group comparisons.
 
 # Conclusions
 
@@ -177,19 +177,19 @@ NIH grants: MH121867 (PI: Poldrack), MH121868 (PI: Rokem, EB027585 (PI: Garyfall
 
 # Software
 
-![](./images/qr_pyafq.png){height=260 style="position: absolute; top: 2875px; left: 1800px;"}
+![](./images/qr_pyafq.png){height=260 style="position: absolute; top: 2750px; left: 1800px;"}
 ![](./images/qr_tractable.png){height=260 style="position: absolute; top: 3200px; left: 1800px;"}
 
-<p style="margin-bottom:8cm">
+<p style="margin-bottom:10cm">
 **pyAFQ**: Automated Fiber Quantification / tractometry
 </p>
 
-![](./images/pyAFQ.png){height=300 style="position: absolute; top: 2875px; left: 2750px;"}
+![](./images/pyAFQ.png){height=400 style="position: absolute; top: 2700px; left: 2750px;"}
 
-<p style="margin-bottom:8cm">
-**Tractable**: Statistical analysis tract profiles in R
+<p style="margin-bottom:10cm">
+**Tractable**: Statistical analysis of tract profiles in R
 </p>
-![](./images/cubic-spline-single.png){height=320 style="position: absolute; top: 3200px; left: 2700px;"}
+![](./images/cubic-spline-single.png){height=420 style="position: absolute; top: 3200px; left: 2700px;"}
 
 # References
 

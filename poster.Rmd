@@ -96,10 +96,10 @@ img[src*='#logo'] {
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-![](./images/university-of-washington-501924867.gif){height=200 style="position: absolute; top: 3800px; left: 700px;"}
-![](./images/Block_S_2_color_red.png){height=200 style="position: absolute; top: 3800px; left: 950px;"}
-![](./images/biu_logo.png){height=200 style="position: absolute; top: 3800px; left: 1100px;"}
-![](./images/qr.png){height=200 style="position: absolute; top: 3800px; left: 1300px;"}
+![](./images/university-of-washington-501924867.gif){height=200 style="position: absolute; top: 4000px; left: 700px;"}
+![](./images/Block_S_2_color_red.png){height=200 style="position: absolute; top: 4000px; left: 950px;"}
+![](./images/biu_logo.png){height=200 style="position: absolute; top: 4000px; left: 1100px;"}
+![](./images/qr.png){height=200 style="position: absolute; top: 4000px; left: 1300px;"}
 
 
 # Background
@@ -108,7 +108,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - The *cognitive dysmetria* theory of schizophrenia posits that the core cognitive deficits arise from dysfunctions of cortical-thalamic-cerebellar (CTC) circuits. [@Andreasen1998-gg]
 - Previous research found increased functional connectivity in the cerebello-thalamo-cortical circuits in individuals at clinical high risk for psychosis. [@Cao2018]
 - This hyperconnectivity was more pronounced in individuals who converted to psychosis, correlated to the severity of symptoms, and was predictive of the time to conversion.
--  The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas… The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle (image taken from [@Palesi2015-oi]).
+-  The cerebellum sends its output through the superior cerebellar peduncle (SCP), the contralateral red nucleus (RN), and VA/VL of the thalamus to various cerebral areas. The decussation (d) of the cerebero-thalamo-cortical pathway is indicated by the yellow circle (image taken from [@Palesi2015-oi]).
 
 <center>
 ![](images/palesi.jpg){width=60% height=60%}
@@ -116,30 +116,44 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **QUESTION**: Are the physical properties of the white matter tracts of the CTC different in individuals with SZ?
 
-\
-
 # Methods
+<p style="margin-bottom:-1cm">
+**Data:**
+</p>
 
-**Data:** the UCLA Consortium for Neuropsychiatric Phenomics LA5c Study, which includes diffusion MRI (dMRI) data from 49 participants with SZ (mean age: 36.2 $\pm$ 8.8 SD; 12 female), 40 participants with ADHD (mean age: 31.95 $\pm$ 10.3 SD; 20 female), 49 participants with bipolar disorder (BD) (mean age: 35.3 $\pm$ 9.0 SD, 21 female), and 123 controls (HC) (mean age: 31.6 $\pm$ 8.8 SD; 58 female).
+- Diffusion MRI data (64 directions, b=1,000 $s/mm^2$) from the UCLA Consortium for Neuropsychiatric Phenomics LA5c study (Open Neuro DS00030).
+- Participants: SZ (N=12F/37M, age: 36.2 $\pm$ 8.8 SD), ADHD (N=20F/20M F/M age: 31.95 $\pm$ 10.3), bipolar disorder (BD; N=21F/28M, age: 35.3 $\pm$ 9.0), Healthy control (HC 58F/65M, age: 31.6 $\pm$ 8.8).
 
-**Processing**: The data were processed using QSIPREP [@Cieslak2021-vj] and pyAFQ [@Kruper2021-az, @Yeatman2012-ze] to extract tract profiles of fractional anisotropy (FA) and mean diffusivity (MD). The bilateral SCP were identified in each individual using anatomical criteria that capture the decussation of the SCP [@Jossinger2023-gj]. Group-blinded QC of SCP bundle was conducted by two expert observers (TG and AR).
+<p style="margin-bottom:-1cm">
+**Processing**:
+</p>
 
-**Analysis**: To overcome confounds due to data quality, each subject in the test group was matched to HC with same age, sex and data quality (neighbor correlations, NDC). Generalized additive models (GAMs) for FA and MD in each SCP as a function of diagnosis (entered as a factor: SZ or HC), nodeID (modeled with an adaptive smooth, where degree of the smooth is determined as the k that minimizes the AIC), age, sex (entered as a factor) and data quality (NDC) [@Muncy2022GAMs].
+- QSIPREP [@Cieslak2021-vj] and pyAFQ [@Kruper2021-az] for preprocessing, QC, and tractometry (FA/MD tract profiles).
+- Bilateral SCP were identified in each individual using anatomical criteria that capture the decussation [@Jossinger2023-gj].
+- Group-blinded QC of SCP bundle was conducted by two expert observers (TG and AR).
+
+<p style="margin-bottom:-1cm">
+**Analysis**:
+</p>
+
+- Data quality confounds were mitigated by matching each SZ/ADHD/BD to a HC with similar age, sex and data quality (neighbor correlations, NDC).
+- Generalized additive models (GAMs) for FA and MD in each SCP as [@Muncy2022GAMs]:
+<p style="font-family:'Lucida Console', monospace">
+  FA/MD ~ group + s(nodeID, k) + age + sex + QC
+</p>
+with k chosen to minimize AIC and neighbor correlations for QC.
+
+<!--
+![](./images/cubic-spline-example.png)
+-->
 
 # Acknowledgements
-
-NIH grants:
-
-MH121867 (PI: Poldrack)
-
-MH121868 (PI: Rokem)
-
-EB027585 (PI: Garyfallidis)
+<div style="font-size:32px">
+NIH grants: MH121867 (PI: Poldrack), MH121868 (PI: Rokem, EB027585 (PI: Garyfallidis)
+</div>
 
 
-\
-
-# Results
+# Results{.mybreak}
 
 ![](images/SCP_right.png){width=24% height=24%}
 ![](images/SCP_back.png){width=24% height=24%}
@@ -147,21 +161,25 @@ EB027585 (PI: Garyfallidis)
 ![](images/SCP_top.png){width=24% height=24%}
 <div style="font-size:32px; font-family:'Palatino'; text-align:center">The left (dark blue) and right (light blue) SCP bundles visualized in an individual with SZ, with sagittal, coronal and axial anatomical views of the T1-weighted scan of this individual.</div>
 
-![](images/figure_mod.png){width=100% height=100%}
+![](./images/tract-profile_by-Group_dti-md.png){width=49% height=49%}
+![](./images/tract-profile_by-Group_dti-fa.png){width=49% height=49%}
+<div style="font-size:32px; font-family:'Palatino'; text-align:center">Tract profiles of MD (left) and FA (right) $\pm$ bootstrapped 95% confidence interval</div>
+
+![](./images/model-SCP_L.png){width=49% height=49%}
+![](./images/model-SCP_R.png){width=49% height=49%}
+<div style="font-size:32px; font-family:'Palatino'; text-align:center">GAM model fits of MD with model-estimated confidence intervals</div>
 
 - MD differed significantly in the left superior cerebellar peduncle (SCP) between the SZ and HC groups (p<0.05), but not between the ADHD and HC groups or BD and HC groups.
 - Individuals with SZ had lower MD in this tract than the matched controls (as indicated).
 - This finding held after adding medication as a covariate (haloperidol equivalent dosage).
 
-\
-
 # Conclusions
 
+<div style="font-size:48px">
 - We found decreased MD in the left SCP, a component of the CTC.
-- Lower MD may indicated increased myelination and therefore increased connectivity.
-- Increased density and directional coherence (but not axonal diameter) may also have similar effects on MD.
 - These results appear in line with previous fMRI results that found increased functional connectivity in the CTC in individuals with SZ. [@Cao2018]
 - This provides additional support for the cognitive dysmetria theory of SZ.
+</div>
 
 # References
 

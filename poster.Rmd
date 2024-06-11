@@ -96,10 +96,12 @@ img[src*='#logo'] {
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-![](./images/university-of-washington-501924867.gif){height=200 style="position: absolute; top: 4000px; left: 700px;"}
-![](./images/Block_S_2_color_red.png){height=200 style="position: absolute; top: 4000px; left: 950px;"}
-![](./images/biu_logo.png){height=200 style="position: absolute; top: 4000px; left: 1100px;"}
-![](./images/qr.png){height=200 style="position: absolute; top: 4000px; left: 1300px;"}
+![](./images/W-Logo_White.png){height=200 style="position: absolute; top: 50px; left: 50px;"}
+![](./images/Block_S_2_color_red.png){height=150 style="position: absolute; top: 150px; left: 2920px;"}
+![](./images/Bar_Ilan_seal.svg.png){height=150 style="position: absolute; top: -50px; left: 2900px;"}
+
+
+![](./images/qr_poster.png){height=200 style="position: absolute; top: 3800px; left: 2900px;"}
 
 
 # Background
@@ -139,19 +141,14 @@ knitr::opts_chunk$set(echo = FALSE)
 - Data quality confounds were mitigated by matching each SZ/ADHD/BD to a HC with similar age, sex and data quality (neighbor correlations, NDC).
 - Generalized additive models (GAMs) for FA and MD in each SCP as [@Muncy2022GAMs]:
 <p style="font-family:'Lucida Console', monospace">
-  FA/MD ~ group + s(nodeID, k) + age + sex + QC
+  FA/MD ~ group + s(nodeID, k, by=group) + \n age + sex + QC + s(subjectID, bs="re")
 </p>
-with k chosen to minimize AIC and neighbor correlations for QC.
-
-<!--
-![](./images/cubic-spline-example.png)
--->
+with k chosen to minimize AIC and neighbor correlations [@Yeh2019NDC] for QC.
 
 # Acknowledgements
-<div style="font-size:32px">
+<div style="font-size:36px">
 NIH grants: MH121867 (PI: Poldrack), MH121868 (PI: Rokem, EB027585 (PI: Garyfallidis)
 </div>
-
 
 # Results{.mybreak}
 
@@ -161,13 +158,11 @@ NIH grants: MH121867 (PI: Poldrack), MH121868 (PI: Rokem, EB027585 (PI: Garyfall
 ![](images/SCP_top.png){width=24% height=24%}
 <div style="font-size:32px; font-family:'Palatino'; text-align:center">The left (dark blue) and right (light blue) SCP bundles visualized in an individual with SZ, with sagittal, coronal and axial anatomical views of the T1-weighted scan of this individual.</div>
 
+<center>
 ![](./images/tract-profile_by-Group_dti-md.png){width=49% height=49%}
 ![](./images/tract-profile_by-Group_dti-fa.png){width=49% height=49%}
+</center>
 <div style="font-size:32px; font-family:'Palatino'; text-align:center">Tract profiles of MD (left) and FA (right) $\pm$ bootstrapped 95% confidence interval</div>
-
-![](./images/model-SCP_L.png){width=49% height=49%}
-![](./images/model-SCP_R.png){width=49% height=49%}
-<div style="font-size:32px; font-family:'Palatino'; text-align:center">GAM model fits of MD with model-estimated confidence intervals</div>
 
 - MD differed significantly in the left superior cerebellar peduncle (SCP) between the SZ and HC groups (p<0.05), but not between the ADHD and HC groups or BD and HC groups.
 - Individuals with SZ had lower MD in this tract than the matched controls (as indicated).
@@ -175,11 +170,26 @@ NIH grants: MH121867 (PI: Poldrack), MH121868 (PI: Rokem, EB027585 (PI: Garyfall
 
 # Conclusions
 
-<div style="font-size:48px">
-- We found decreased MD in the left SCP, a component of the CTC.
-- These results appear in line with previous fMRI results that found increased functional connectivity in the CTC in individuals with SZ. [@Cao2018]
-- This provides additional support for the cognitive dysmetria theory of SZ.
-</div>
+- We found decreased MD in SZ in the left SCP, a component of the CTC.
+- In line with fMRI results that found increased functional connectivity in CTC in SZ. [@Cao2018]
+- Provides additional support for the cognitive dysmetria theory of SZ.
+
+
+# Software
+
+![](./images/qr_pyafq.png){height=260 style="position: absolute; top: 2875px; left: 1800px;"}
+![](./images/qr_tractable.png){height=260 style="position: absolute; top: 3200px; left: 1800px;"}
+
+<p style="margin-bottom:8cm">
+**pyAFQ**: Automated Fiber Quantification / tractometry
+</p>
+
+![](./images/pyAFQ.png){height=300 style="position: absolute; top: 2875px; left: 2750px;"}
+
+<p style="margin-bottom:8cm">
+**Tractable**: Statistical analysis tract profiles in R
+</p>
+![](./images/cubic-spline-single.png){height=320 style="position: absolute; top: 3200px; left: 2700px;"}
 
 # References
 

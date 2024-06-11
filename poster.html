@@ -336,10 +336,10 @@ img[src*='#logo'] {
 }
 
 </style>
-<p><img src="images/university-of-washington-501924867.gif" style="position: absolute; top: 4000px; left: 700px;" height="200" />
-<img src="images/Block_S_2_color_red.png" style="position: absolute; top: 4000px; left: 950px;" height="200" />
-<img src="images/biu_logo.png" style="position: absolute; top: 4000px; left: 1100px;" height="200" />
-<img src="images/qr.png" style="position: absolute; top: 4000px; left: 1300px;" height="200" /></p>
+<p><img src="images/W-Logo_White.png" style="position: absolute; top: 50px; left: 50px;" height="200" />
+<img src="images/Block_S_2_color_red.png" style="position: absolute; top: 150px; left: 2920px;" height="150" />
+<img src="images/Bar_Ilan_seal.svg.png" style="position: absolute; top: -50px; left: 2900px;" height="150" /></p>
+<p><img src="images/qr_poster.png" style="position: absolute; top: 3800px; left: 2900px;" height="200" /></p>
 <div id="background" class="section level1">
 <h1>Background</h1>
 <ul>
@@ -378,17 +378,14 @@ img[src*='#logo'] {
 <li>Data quality confounds were mitigated by matching each SZ/ADHD/BD to a HC with similar age, sex and data quality (neighbor correlations, NDC).</li>
 <li>Generalized additive models (GAMs) for FA and MD in each SCP as <span class="citation">(<em>7</em>)</span>:
 <p style="font-family:&#39;Lucida Console&#39;, monospace">
-FA/MD ~ group + s(nodeID, k) + age + sex + QC
+FA/MD ~ group + s(nodeID, k, by=group) + age + sex + QC + s(subjectID, bs=“re”)
 </p>
-with k chosen to minimize AIC and neighbor correlations for QC.</li>
+with k chosen to minimize AIC and neighbor correlations <span class="citation">(<em>8</em>)</span> for QC.</li>
 </ul>
-<!--
-![](./images/cubic-spline-example.png)
--->
 </div>
 <div id="acknowledgements" class="section level1">
 <h1>Acknowledgements</h1>
-<div style="font-size:32px">
+<div style="font-size:36px">
 <p>NIH grants: MH121867 (PI: Poldrack), MH121868 (PI: Rokem, EB027585 (PI: Garyfallidis)</p>
 </div>
 </div>
@@ -401,15 +398,12 @@ with k chosen to minimize AIC and neighbor correlations for QC.</li>
 <div style="font-size:32px; font-family:&#39;Palatino&#39;; text-align:center">
 The left (dark blue) and right (light blue) SCP bundles visualized in an individual with SZ, with sagittal, coronal and axial anatomical views of the T1-weighted scan of this individual.
 </div>
+<center>
 <img src="images/tract-profile_by-Group_dti-md.png" style="width:49.0%;height:49.0%" />
 <img src="images/tract-profile_by-Group_dti-fa.png" style="width:49.0%;height:49.0%" />
+</center>
 <div style="font-size:32px; font-family:&#39;Palatino&#39;; text-align:center">
 Tract profiles of MD (left) and FA (right) <span class="math inline">\(\pm\)</span> bootstrapped 95% confidence interval
-</div>
-<img src="images/model-SCP_L.png" style="width:49.0%;height:49.0%" />
-<img src="images/model-SCP_R.png" style="width:49.0%;height:49.0%" />
-<div style="font-size:32px; font-family:&#39;Palatino&#39;; text-align:center">
-GAM model fits of MD with model-estimated confidence intervals
 </div>
 <ul>
 <li>MD differed significantly in the left superior cerebellar peduncle (SCP) between the SZ and HC groups (p&lt;0.05), but not between the ADHD and HC groups or BD and HC groups.</li>
@@ -419,13 +413,24 @@ GAM model fits of MD with model-estimated confidence intervals
 </div>
 <div id="conclusions" class="section level1">
 <h1>Conclusions</h1>
-<div style="font-size:48px">
 <ul>
-<li>We found decreased MD in the left SCP, a component of the CTC.</li>
-<li>These results appear in line with previous fMRI results that found increased functional connectivity in the CTC in individuals with SZ. <span class="citation">(<em>2</em>)</span></li>
-<li>This provides additional support for the cognitive dysmetria theory of SZ.</li>
+<li>We found decreased MD in SZ in the left SCP, a component of the CTC.</li>
+<li>In line with fMRI results that found increased functional connectivity in CTC in SZ. <span class="citation">(<em>2</em>)</span></li>
+<li>Provides additional support for the cognitive dysmetria theory of SZ.</li>
 </ul>
 </div>
+<div id="software" class="section level1">
+<h1>Software</h1>
+<p><img src="images/qr_pyafq.png" style="position: absolute; top: 2875px; left: 1800px;" height="260" />
+<img src="images/qr_tractable.png" style="position: absolute; top: 3200px; left: 1800px;" height="260" /></p>
+<p style="margin-bottom:8cm">
+<strong>pyAFQ</strong>: Automated Fiber Quantification / tractometry
+</p>
+<p><img src="images/pyAFQ.png" style="position: absolute; top: 2875px; left: 2750px;" height="300" /></p>
+<p style="margin-bottom:8cm">
+<strong>Tractable</strong>: Statistical analysis tract profiles in R
+</p>
+<p><img src="images/cubic-spline-single.png" style="position: absolute; top: 3200px; left: 2700px;" height="320" /></p>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
@@ -450,6 +455,9 @@ GAM model fits of MD with model-estimated confidence intervals
 </div>
 <div id="ref-Muncy2022GAMs" class="csl-entry">
 7. N. M. Muncy <em>et al.</em>, <em>Neuroimage Clin</em>. <strong>33</strong>, 102937 (2022).
+</div>
+<div id="ref-Yeh2019NDC" class="csl-entry">
+8. F.-C. Yeh <em>et al.</em>, <em>Neuroimage</em>. <strong>202</strong>, 116131 (2019).
 </div>
 </div>
 </div>

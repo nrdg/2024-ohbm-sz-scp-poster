@@ -103,9 +103,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![](./images/qr_poster.png){height=260 style="position: absolute; top: 3800px; left: 2900px;"}
 
-
+<p style="margin-top:-1cm">
 # Background
-
+</p>
 - Schizophrenia (SZ) is a neurodevelopmental psychiatric disorder that carries significant health burden.
 - The *cognitive dysmetria* theory of schizophrenia posits that the core cognitive deficits arise from dysfunctions of cortical-thalamic-cerebellar (CTC) circuits. [@Andreasen1998-gg]
 - Previous research found increased functional connectivity in CTC in individuals at clinical high risk for psychosis. [@Cao2018]
@@ -124,7 +124,7 @@ knitr::opts_chunk$set(echo = FALSE)
 </p>
 
 - Diffusion MRI data (64 directions, b=1,000 $s/mm^2$) from the UCLA Consortium for Neuropsychiatric Phenomics LA5c study (Open Neuro DS00030).
-- Participants: SZ (N=12F/37M, age: 36.2 $\pm$ 8.8 SD), ADHD (N=20F/20M F/M age: 31.95 $\pm$ 10.3), bipolar disorder (BD; N=21F/28M, age: 35.3 $\pm$ 9.0), Healthy control (HC 58F/65M, age: 31.6 $\pm$ 8.8).
+- Participants: SZ (N=12F/37M, age: 36.2 $\pm$ 8.8 SD), ADHD (N=20F/20M age: 31.95 $\pm$ 10.3), bipolar disorder (BD; N=21F/28M, age: 35.3 $\pm$ 9.0), Healthy control (HC 58F/65M, age: 31.6 $\pm$ 8.8).
 
 <p style="margin-bottom:-1cm">
 **Processing**:
@@ -171,25 +171,27 @@ NIH grants: MH121867 (PI: Poldrack), MH121868 (PI: Rokem), EB027585 (PI: Garyfal
 # Conclusions
 
 - We found decreased MD in SZ in the left SCP, a component of the CTC.
-- In line with fMRI results that found increased functional connectivity in CTC in SZ. [@Cao2018]
+- In line with fMRI results that found increased functional connectivity in CTC in SZ [@Cao2018].
 - Provides additional support for the cognitive dysmetria theory of SZ.
 
 
 # Software
 
-![](./images/qr_pyafq.png){height=260 style="position: absolute; top: 2750px; left: 1800px;"}
-![](./images/qr_tractable.png){height=260 style="position: absolute; top: 3200px; left: 1800px;"}
+![](./images/qr_pyafq.png){height=260 style="position: absolute; top: 2850px; left: 1800px;"}
+![](./images/qr_tractable.png){height=260 style="position: absolute; top: 3300px; left: 1800px;"}
 
 <p style="margin-bottom:10cm">
-**pyAFQ**: Automated Fiber Quantification / tractometry
+**pyAFQ**: Automated Fiber <br> Quantification / tractometry
 </p>
 
-![](./images/pyAFQ.png){height=400 style="position: absolute; top: 2700px; left: 2750px;"}
+![](./images/pyAFQ.png){height=450 style="position: absolute; top: 2700px; left: 2500px;"}
 
 <p style="margin-bottom:10cm">
-**Tractable**: Statistical analysis of tract profiles in R
+**Tractable**: Statistical <br> analysis of tract profiles in R
 </p>
-![](./images/cubic-spline-single.png){height=420 style="position: absolute; top: 3200px; left: 2700px;"}
+![](./images/cubic-spline-single.png){height=460 style="position: absolute; top: 3150px; left: 2500px;"}
 
+<p style="margin-top:-2cm">
 # References
+</p>
 

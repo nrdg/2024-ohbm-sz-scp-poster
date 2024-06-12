@@ -36,3 +36,24 @@ jobs:
               with:
                 name: poster
                 path: poster.pdf
+<<<<<<< manual_deployment
+=======
+
+    deploy:
+      needs: build
+      runs-on: ubuntu-latest
+      if: github.event.pull_request.merged == true
+      steps:
+            - name: Commit poster PDF
+              uses: EndBug/add-and-commit@v9
+              with:
+                add: 'poster.pdf'
+                author_name: 'GitHub Actions'
+                message: 'Add poster.pdf at ${{ github.sha }}'
+
+            - name: Deploy html to gh-pages
+              uses: JamesIves/github-pages-deploy-action@4.1.5
+              with:
+                branch: gh-pages
+                folder: ${{github.workspace}}/website
+>>>>>>> main

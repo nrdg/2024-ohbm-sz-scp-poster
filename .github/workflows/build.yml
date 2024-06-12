@@ -38,6 +38,7 @@ jobs:
                 path: poster.pdf
 
     deploy:
+      needs: build
       runs-on: ubuntu-latest
       if: github.event.pull_request.merged == true
       steps:

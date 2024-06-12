@@ -1,22 +1,13 @@
-on: [push, pull_request]
+name: Deploy
 
-name: Render and Publish
-
-permissions:
-    contents: write
-    pages: write
+# configure manual trigger
+on:
+  workflow_dispatch:
 
 jobs:
-    codespell:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - uses: codespell-project/actions-codespell@master
-
-    build:
+    deploy:
         runs-on: ubuntu-latest
         steps:
-
             - uses: actions/checkout@v4
             - uses: awalsh128/cache-apt-pkgs-action@latest
               with:
@@ -31,19 +22,6 @@ jobs:
             - name: Build the poster
               run: make install && make all && mkdir website && mv poster.html website/index.html && touch website/.nojekyll
 
-            - name: Upload PDF
-              uses: actions/upload-artifact@v1
-              with:
-                name: poster
-                path: poster.pdf
-<<<<<<< manual_deployment
-=======
-
-    deploy:
-      needs: build
-      runs-on: ubuntu-latest
-      if: github.event.pull_request.merged == true
-      steps:
             - name: Commit poster PDF
               uses: EndBug/add-and-commit@v9
               with:
@@ -56,4 +34,3 @@ jobs:
               with:
                 branch: gh-pages
                 folder: ${{github.workspace}}/website
->>>>>>> main
